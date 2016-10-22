@@ -12,9 +12,11 @@
 		88FAEDFD1DBBF2DB00A7D584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEDFB1DBBF2DB00A7D584 /* Main.storyboard */; };
 		88FAEDFF1DBBF2DB00A7D584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEDFE1DBBF2DB00A7D584 /* Assets.xcassets */; };
 		88FAEE021DBBF2DB00A7D584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEE001DBBF2DB00A7D584 /* LaunchScreen.storyboard */; };
+		D65857F7DD0C9FF8BBA93221 /* Pods_McKinseyHACKS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC867ABEE26AABCB201F56C2 /* Pods_McKinseyHACKS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15BA20B320AB6BE7B2991694 /* Pods-McKinseyHACKS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-McKinseyHACKS.release.xcconfig"; path = "Pods/Target Support Files/Pods-McKinseyHACKS/Pods-McKinseyHACKS.release.xcconfig"; sourceTree = "<group>"; };
 		88FAEDF41DBBF2DB00A7D584 /* McKinseyHACKS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McKinseyHACKS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FAEDF71DBBF2DB00A7D584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FAEDF91DBBF2DB00A7D584 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		88FAEDFE1DBBF2DB00A7D584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88FAEE011DBBF2DB00A7D584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88FAEE031DBBF2DB00A7D584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C481530E1E73C4D802C0558 /* Pods-McKinseyHACKS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-McKinseyHACKS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-McKinseyHACKS/Pods-McKinseyHACKS.debug.xcconfig"; sourceTree = "<group>"; };
+		AC867ABEE26AABCB201F56C2 /* Pods_McKinseyHACKS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_McKinseyHACKS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65857F7DD0C9FF8BBA93221 /* Pods_McKinseyHACKS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07407F0F1A7F73DDC254B327 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC867ABEE26AABCB201F56C2 /* Pods_McKinseyHACKS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		88FAEDEB1DBBF2DB00A7D584 = {
 			isa = PBXGroup;
 			children = (
 				88FAEDF61DBBF2DB00A7D584 /* McKinseyHACKS */,
 				88FAEDF51DBBF2DB00A7D584 /* Products */,
+				CB3D4BDCE464EA4E194D973D /* Pods */,
+				07407F0F1A7F73DDC254B327 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = McKinseyHACKS;
 			sourceTree = "<group>";
 		};
+		CB3D4BDCE464EA4E194D973D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C481530E1E73C4D802C0558 /* Pods-McKinseyHACKS.debug.xcconfig */,
+				15BA20B320AB6BE7B2991694 /* Pods-McKinseyHACKS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88FAEE061DBBF2DB00A7D584 /* Build configuration list for PBXNativeTarget "McKinseyHACKS" */;
 			buildPhases = (
+				CA6DEC6E76DCC53AF6586C7F /* [CP] Check Pods Manifest.lock */,
 				88FAEDF01DBBF2DB00A7D584 /* Sources */,
 				88FAEDF11DBBF2DB00A7D584 /* Frameworks */,
 				88FAEDF21DBBF2DB00A7D584 /* Resources */,
+				0DEEA1A62C0CB8F7BCCF46E7 /* [CP] Embed Pods Frameworks */,
+				72F0B9628355A9FC56624379 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DEEA1A62C0CB8F7BCCF46E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-McKinseyHACKS/Pods-McKinseyHACKS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72F0B9628355A9FC56624379 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-McKinseyHACKS/Pods-McKinseyHACKS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA6DEC6E76DCC53AF6586C7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88FAEDF01DBBF2DB00A7D584 /* Sources */ = {
@@ -248,6 +323,7 @@
 		};
 		88FAEE071DBBF2DB00A7D584 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C481530E1E73C4D802C0558 /* Pods-McKinseyHACKS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = McKinseyHACKS/Info.plist;
@@ -259,6 +335,7 @@
 		};
 		88FAEE081DBBF2DB00A7D584 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15BA20B320AB6BE7B2991694 /* Pods-McKinseyHACKS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = McKinseyHACKS/Info.plist;
@@ -287,6 +364,7 @@
 				88FAEE081DBBF2DB00A7D584 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
