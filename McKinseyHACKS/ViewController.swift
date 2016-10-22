@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
     @IBOutlet weak var textfield2: UITextField!
     @IBOutlet weak var textfield3: UITextField!
     
+    let link = Jobs()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,10 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
         
          // for tapping outside keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard)))
+        
+        link.downloadJobs()
+        
+        
         
     }
     
