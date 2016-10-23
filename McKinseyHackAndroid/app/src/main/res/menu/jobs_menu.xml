@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item-->
+        <!--android:id="@+id/jobs_menu_search"-->
+        <!--android:icon="@drawable/search_icon"-->
+        <!--app:showAsAction="ifRoom"-->
+        <!--android:title="Create User"-->
+        <!--android:visible="true"/>-->
+
+    <item
+        android:id="@+id/jobs_menu_search"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/search_icon"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:visible="true"/>
+
+
+
+</menu>

@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jordanleex13.mckinseyhackandroid.MainFragment">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_main_textview_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textSize="@dimen/extra_large_text"
+            android:fontFamily="sans-serif-light"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/small_margin"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/fragment_main_education_logo"
+                    android:layout_width="@dimen/category_icon_size"
+                    android:layout_height="@dimen/category_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/education_logo"/>
+
+                <ImageButton
+                    android:id="@+id/fragment_main_jobs_logo"
+                    android:layout_width="@dimen/category_icon_size"
+                    android:layout_height="@dimen/category_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/jobs_logo"
+                    android:layout_below="@id/fragment_main_education_logo"/>
+
+                <ImageButton
+                    android:id="@+id/fragment_main_news_logo"
+                    android:layout_width="@dimen/category_icon_size"
+                    android:layout_height="@dimen/category_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/news_logo"
+                    android:layout_below="@id/fragment_main_jobs_logo"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/fragment_main_police_logo"
+                    android:layout_width="@dimen/category_icon_size"
+                    android:layout_height="@dimen/category_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/police_logo"/>
+
+                <ImageButton
+                    android:id="@+id/fragment_main_prapp_logo"
+                    android:layout_width="@dimen/category_icon_size"
+                    android:layout_height="@dimen/category_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/prapp_logo"
+                    android:layout_below="@id/fragment_main_police_logo"/>
+
+                <ImageButton
+                    android:id="@+id/fragment_main_community_logo"
+                    android:layout_width="@dimen/category_icon_size"
+                    android:layout_height="@dimen/category_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/community_logo"
+                    android:layout_below="@id/fragment_main_prapp_logo"/>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
