@@ -16,8 +16,7 @@ class DLJobs {
     var jobTitle: String!
     var snippet: String!
     var url: String!
-    
-    
+    var query = "java" //default job search/query
     
     init() {
 
@@ -25,7 +24,9 @@ class DLJobs {
     
     func downloadJobs(complete: DLComplete) {
         
-        let url = NSURL(string: URL)!
+        let tempUrl = URL + query + URL2
+        
+        let url = NSURL(string: tempUrl)!
        
         Alamofire.request(.GET, url).responseJSON { response in
             //print(response)
@@ -75,4 +76,5 @@ class DLJobs {
             complete()
         }
     }
+    
 }

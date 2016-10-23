@@ -17,8 +17,7 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var positionsLbl: UILabel!
     
-    
-    
+    var newSearch: DLJobs!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +88,8 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        let str = searchBar.text
+        
     
     }
     
