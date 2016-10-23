@@ -16,3 +16,4 @@ Tools Used:
 - Alamofire for web-requests (parsed the JSON)
 - Indeed API for job listings and applications
 - Google Maps API for jobs near users (in a specified radius centred around the user's GPS coordinates')
+- Leveraged open data sets
