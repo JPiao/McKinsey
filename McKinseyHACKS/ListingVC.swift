@@ -17,7 +17,8 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var positionsLbl: UILabel!
     
-    var newSearch: DLJobs!
+    var searchStr: String = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +26,15 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         TbView.delegate = self
         TbView.dataSource = self
         searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.Done
+        searchBar.enablesReturnKeyAutomatically = false
+        
         
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,6 +59,7 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             return cell
         } else {
             return ListCell()
+
         }
     }
     
@@ -88,8 +95,18 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        let str = searchBar.text
         
+        if searchBar.text != "" || searchBar.text != nil {
+            let x = DLJobs()
+            searchStr = searchBar.text!
+            let str = searchStr
+            DataService.shared.searchTerm = str
+            x.reloadSearch()
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.TbView.reloadData() //throwing it back on the main thread
+            })
+           
+        }
     
     }
     
@@ -105,6 +122,8 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         
         }
     }
+    
+
 
     
 

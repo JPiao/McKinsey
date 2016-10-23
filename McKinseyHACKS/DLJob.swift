@@ -16,19 +16,16 @@ class DLJobs {
     var jobTitle: String!
     var snippet: String!
     var url: String!
-    var query = "java" //default job search/query
-    
-    init() {
-
-    }
     
     func downloadJobs(complete: DLComplete) {
         
-        let tempUrl = URL + query + URL2
+        var tempArray = [NewJob]()
         
-        let url = NSURL(string: tempUrl)!
+        let tempUrl = URL + DataService.shared.searchTerm + URL2
+        
+        let NsUrl = NSURL(string: tempUrl)!
        
-        Alamofire.request(.GET, url).responseJSON { response in
+        Alamofire.request(.GET, NsUrl).responseJSON { response in
             //print(response)
             let result = response.result
             print("HERE")
@@ -66,9 +63,11 @@ class DLJobs {
                         
                         let newJob = NewJob(company: self.company, jobTitle: self.jobTitle, snippet: self.snippet, url: String(self.url))
                         
-                        DataService.shared.addJob(newJob)
+                        tempArray.append(newJob)
                         
                     }
+                    
+                    DataService.shared.jobList = tempArray
                     
                 }
                 
@@ -77,4 +76,10 @@ class DLJobs {
         }
     }
     
+    func reloadSearch() {
+        downloadJobs { 
+            
+        }
+    }
+
 }

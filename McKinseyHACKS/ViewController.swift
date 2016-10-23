@@ -26,13 +26,12 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
         textfield2.delegate = self
         textfield3.delegate = self
         
-        
-        
-        Link2.downloadJobs { 
+        Link2.downloadJobs {
             for i in 0 ..< DataService.shared.jobList.count {
                 print(DataService.shared.jobList[i].comp)
-            }
         }
+            
+    }
         
          // for tapping outside keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard)))
