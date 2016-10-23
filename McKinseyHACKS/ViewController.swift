@@ -13,11 +13,11 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
     @IBOutlet weak var textfield1: UITextField!
     @IBOutlet weak var textfield2: UITextField!
     @IBOutlet weak var textfield3: UITextField!
-    
-    let link = Jobs()
-    
 
+    var Link2 = DLJobs()
+    
     override func viewDidLoad() {
+    
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -26,12 +26,18 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
         textfield2.delegate = self
         textfield3.delegate = self
         
+        
+        
+        Link2.downloadJobs { 
+            for i in 0 ..< DataService.shared.jobList.count {
+                print(DataService.shared.jobList[i].comp)
+            }
+        }
+        
          // for tapping outside keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard)))
         
-        link.downloadJobs()
-        
-        
+
         
     }
     

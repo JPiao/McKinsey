@@ -12,7 +12,10 @@
 		88FAEDFD1DBBF2DB00A7D584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEDFB1DBBF2DB00A7D584 /* Main.storyboard */; };
 		88FAEDFF1DBBF2DB00A7D584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEDFE1DBBF2DB00A7D584 /* Assets.xcassets */; };
 		88FAEE021DBBF2DB00A7D584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEE001DBBF2DB00A7D584 /* LaunchScreen.storyboard */; };
-		88FAEE0A1DBC13FC00A7D584 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE091DBC13FC00A7D584 /* Job.swift */; };
+		88FAEE0A1DBC13FC00A7D584 /* DLJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE091DBC13FC00A7D584 /* DLJob.swift */; };
+		88FAEE0C1DBC276200A7D584 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE0B1DBC276200A7D584 /* Constants.swift */; };
+		88FAEE0E1DBC2F3000A7D584 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE0D1DBC2F3000A7D584 /* DataService.swift */; };
+		88FAEE101DBC35AE00A7D584 /* NewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE0F1DBC35AE00A7D584 /* NewJob.swift */; };
 		D65857F7DD0C9FF8BBA93221 /* Pods_McKinseyHACKS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC867ABEE26AABCB201F56C2 /* Pods_McKinseyHACKS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +28,10 @@
 		88FAEDFE1DBBF2DB00A7D584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88FAEE011DBBF2DB00A7D584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88FAEE031DBBF2DB00A7D584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88FAEE091DBC13FC00A7D584 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		88FAEE091DBC13FC00A7D584 /* DLJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLJob.swift; sourceTree = "<group>"; };
+		88FAEE0B1DBC276200A7D584 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		88FAEE0D1DBC2F3000A7D584 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		88FAEE0F1DBC35AE00A7D584 /* NewJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewJob.swift; sourceTree = "<group>"; };
 		8C481530E1E73C4D802C0558 /* Pods-McKinseyHACKS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-McKinseyHACKS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-McKinseyHACKS/Pods-McKinseyHACKS.debug.xcconfig"; sourceTree = "<group>"; };
 		AC867ABEE26AABCB201F56C2 /* Pods_McKinseyHACKS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_McKinseyHACKS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,7 +83,10 @@
 				88FAEDFE1DBBF2DB00A7D584 /* Assets.xcassets */,
 				88FAEE001DBBF2DB00A7D584 /* LaunchScreen.storyboard */,
 				88FAEE031DBBF2DB00A7D584 /* Info.plist */,
-				88FAEE091DBC13FC00A7D584 /* Job.swift */,
+				88FAEE091DBC13FC00A7D584 /* DLJob.swift */,
+				88FAEE0B1DBC276200A7D584 /* Constants.swift */,
+				88FAEE0D1DBC2F3000A7D584 /* DataService.swift */,
+				88FAEE0F1DBC35AE00A7D584 /* NewJob.swift */,
 			);
 			path = McKinseyHACKS;
 			sourceTree = "<group>";
@@ -215,8 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				88FAEDFA1DBBF2DB00A7D584 /* ViewController.swift in Sources */,
-				88FAEE0A1DBC13FC00A7D584 /* Job.swift in Sources */,
+				88FAEE0A1DBC13FC00A7D584 /* DLJob.swift in Sources */,
 				88FAEDF81DBBF2DB00A7D584 /* AppDelegate.swift in Sources */,
+				88FAEE0C1DBC276200A7D584 /* Constants.swift in Sources */,
+				88FAEE101DBC35AE00A7D584 /* NewJob.swift in Sources */,
+				88FAEE0E1DBC2F3000A7D584 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
