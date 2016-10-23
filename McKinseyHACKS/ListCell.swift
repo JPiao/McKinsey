@@ -17,9 +17,6 @@ class ListCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        desc.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        desc.numberOfLines = 0
        
         
     }

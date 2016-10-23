@@ -53,7 +53,9 @@ class DLJobs {
                         
                         if let desc = results[i]["snippet"] as? String {
                             print(desc)
-                            self.snippet = desc
+                            let str1 = desc.stringByReplacingOccurrencesOfString("<b>", withString: "")
+                            let str2 = str1.stringByReplacingOccurrencesOfString("</b>", withString: "")
+                            self.snippet = str2
                         }
                         
                         if let link = results[i]["url"] as? String {

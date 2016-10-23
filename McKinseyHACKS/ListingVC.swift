@@ -12,6 +12,7 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var TbView: UITableView!
     @IBOutlet weak var prevBtn: UIButton!
+    @IBOutlet weak var desc: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +43,30 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("listCell") as? ListCell {
             cell.configureCell(post)
+           
             return cell
         } else {
             return ListCell()
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let url = DataService.shared.jobList[indexPath.row].url
+        performSegueWithIdentifier("WebView", sender: url)
+    }
+    
+    //connect segue from view controller and not table view cell or else you get nil when passing data
+    //if connecting segue from cell, it doesn't call the code we wrote, it only triggers a segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "WebView" {
+            if let svc = segue.destinationViewController as? WebVC {
+                if let info = sender as? String {
+                    print("asasdfasdfasdfsadf")
+                    print(info)
+                    svc.WebUrl = info
+                    print(svc.WebUrl)
+                }
+            }
         }
     }
     

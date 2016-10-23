@@ -18,6 +18,7 @@
 		88FAEE101DBC35AE00A7D584 /* NewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE0F1DBC35AE00A7D584 /* NewJob.swift */; };
 		88FAEE121DBC3E8600A7D584 /* ListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE111DBC3E8600A7D584 /* ListingVC.swift */; };
 		88FAEE141DBC401100A7D584 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE131DBC401100A7D584 /* ListCell.swift */; };
+		88FAEE161DBC574C00A7D584 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE151DBC574C00A7D584 /* WebVC.swift */; };
 		D65857F7DD0C9FF8BBA93221 /* Pods_McKinseyHACKS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC867ABEE26AABCB201F56C2 /* Pods_McKinseyHACKS.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		88FAEE0F1DBC35AE00A7D584 /* NewJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewJob.swift; sourceTree = "<group>"; };
 		88FAEE111DBC3E8600A7D584 /* ListingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingVC.swift; sourceTree = "<group>"; };
 		88FAEE131DBC401100A7D584 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		88FAEE151DBC574C00A7D584 /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		8C481530E1E73C4D802C0558 /* Pods-McKinseyHACKS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-McKinseyHACKS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-McKinseyHACKS/Pods-McKinseyHACKS.debug.xcconfig"; sourceTree = "<group>"; };
 		AC867ABEE26AABCB201F56C2 /* Pods_McKinseyHACKS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_McKinseyHACKS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				88FAEE0F1DBC35AE00A7D584 /* NewJob.swift */,
 				88FAEE111DBC3E8600A7D584 /* ListingVC.swift */,
 				88FAEE131DBC401100A7D584 /* ListCell.swift */,
+				88FAEE151DBC574C00A7D584 /* WebVC.swift */,
 			);
 			path = McKinseyHACKS;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FAEE161DBC574C00A7D584 /* WebVC.swift in Sources */,
 				88FAEDFA1DBBF2DB00A7D584 /* ViewController.swift in Sources */,
 				88FAEE0A1DBC13FC00A7D584 /* DLJob.swift in Sources */,
 				88FAEDF81DBBF2DB00A7D584 /* AppDelegate.swift in Sources */,
