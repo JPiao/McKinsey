@@ -16,7 +16,32 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14797294_10154089785927426_916207148_n.png" translatesAutoresizingMaskIntoConstraints="NO" id="acG-FD-J0U">
+                                <rect key="frame" x="200" y="95" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="41L-cD-Dc1"/>
+                                    <constraint firstAttribute="height" constant="200" id="cxV-rh-Gka"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dönum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hih-6y-OPs">
+                                <rect key="frame" x="172" y="350" width="257" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="6Wj-0X-XME"/>
+                                    <constraint firstAttribute="height" constant="88" id="nim-o7-lIb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="71"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="acG-FD-J0U" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Aiu-E8-xrb"/>
+                            <constraint firstItem="acG-FD-J0U" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="75" id="TSC-CF-Foe"/>
+                            <constraint firstItem="hih-6y-OPs" firstAttribute="top" secondItem="acG-FD-J0U" secondAttribute="bottom" constant="55" id="cuO-5M-0ee"/>
+                            <constraint firstItem="hih-6y-OPs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="klu-k7-nUJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +49,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="14797294_10154089785927426_916207148_n.png" width="180" height="181"/>
+    </resources>
 </document>
