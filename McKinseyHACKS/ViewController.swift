@@ -63,7 +63,9 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
         if textfield4.text != "" || textfield4.text != nil {
             DataService.shared.searchTerm = textfield4.text!
             
-        } 
+        } else {
+            DataService.shared.searchTerm = "java"
+        }
         performSegueWithIdentifier("contBtn", sender: nil)
         
         Link2.downloadJobs { //need to call this after button press and not in viewdidload or appear since dataservice.shared.search term is nil when the view is loaded into memory and will result in error

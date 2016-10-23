@@ -16,6 +16,7 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var positionsLbl: UILabel!
+    @IBOutlet weak var mapBtn: UIButton!
     
     var searchStr: String = ""
     
@@ -92,6 +93,7 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         prevBtn.alpha = 0
         positionsLbl.alpha = 0
         searchBtn.alpha = 0
+        mapBtn.alpha = 0
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -128,6 +130,7 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             prevBtn.alpha = 1
             positionsLbl.alpha = 1
             searchBtn.alpha = 1
+            mapBtn.alpha = 1
            
             view.endEditing(true)
         
