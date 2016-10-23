@@ -16,6 +16,8 @@
 		88FAEE0C1DBC276200A7D584 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE0B1DBC276200A7D584 /* Constants.swift */; };
 		88FAEE0E1DBC2F3000A7D584 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE0D1DBC2F3000A7D584 /* DataService.swift */; };
 		88FAEE101DBC35AE00A7D584 /* NewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE0F1DBC35AE00A7D584 /* NewJob.swift */; };
+		88FAEE121DBC3E8600A7D584 /* ListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE111DBC3E8600A7D584 /* ListingVC.swift */; };
+		88FAEE141DBC401100A7D584 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAEE131DBC401100A7D584 /* ListCell.swift */; };
 		D65857F7DD0C9FF8BBA93221 /* Pods_McKinseyHACKS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC867ABEE26AABCB201F56C2 /* Pods_McKinseyHACKS.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		88FAEE0B1DBC276200A7D584 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		88FAEE0D1DBC2F3000A7D584 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		88FAEE0F1DBC35AE00A7D584 /* NewJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewJob.swift; sourceTree = "<group>"; };
+		88FAEE111DBC3E8600A7D584 /* ListingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingVC.swift; sourceTree = "<group>"; };
+		88FAEE131DBC401100A7D584 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		8C481530E1E73C4D802C0558 /* Pods-McKinseyHACKS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-McKinseyHACKS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-McKinseyHACKS/Pods-McKinseyHACKS.debug.xcconfig"; sourceTree = "<group>"; };
 		AC867ABEE26AABCB201F56C2 /* Pods_McKinseyHACKS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_McKinseyHACKS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +91,8 @@
 				88FAEE0B1DBC276200A7D584 /* Constants.swift */,
 				88FAEE0D1DBC2F3000A7D584 /* DataService.swift */,
 				88FAEE0F1DBC35AE00A7D584 /* NewJob.swift */,
+				88FAEE111DBC3E8600A7D584 /* ListingVC.swift */,
+				88FAEE131DBC401100A7D584 /* ListCell.swift */,
 			);
 			path = McKinseyHACKS;
 			sourceTree = "<group>";
@@ -228,6 +234,8 @@
 				88FAEDF81DBBF2DB00A7D584 /* AppDelegate.swift in Sources */,
 				88FAEE0C1DBC276200A7D584 /* Constants.swift in Sources */,
 				88FAEE101DBC35AE00A7D584 /* NewJob.swift in Sources */,
+				88FAEE141DBC401100A7D584 /* ListCell.swift in Sources */,
+				88FAEE121DBC3E8600A7D584 /* ListingVC.swift in Sources */,
 				88FAEE0E1DBC2F3000A7D584 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
