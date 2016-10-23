@@ -14,7 +14,7 @@ class DataService {
     
     var jobList = [NewJob]()
     
-    var searchTerm = "java"
+    var searchTerm: String!
     
     func addJob(job: NewJob) {
         jobList.append(job)

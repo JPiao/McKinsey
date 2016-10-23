@@ -19,7 +19,7 @@ class DLJobs {
     
     func downloadJobs(complete: DLComplete) {
         
-        var tempArray = [NewJob]()
+        var tempArray = [NewJob]() //clearing old searche results
         
         let tempUrl = URL + DataService.shared.searchTerm + URL2
         
@@ -67,7 +67,7 @@ class DLJobs {
                         
                     }
                     
-                    DataService.shared.jobList = tempArray
+                    self.updateJobs(tempArray)
                     
                 }
                 
@@ -76,10 +76,15 @@ class DLJobs {
         }
     }
     
-    func reloadSearch() {
+    func updateJobs(arr: [NewJob]) {
+        DataService.shared.jobList = arr
+    }
+    
+    func reloadSearch(completed: DLComplete) {
         downloadJobs { 
             
         }
+        completed()
     }
 
 }

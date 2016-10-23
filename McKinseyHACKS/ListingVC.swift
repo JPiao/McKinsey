@@ -97,14 +97,25 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         
         if searchBar.text != "" || searchBar.text != nil {
-            let x = DLJobs()
+            let job = DLJobs()
             searchStr = searchBar.text!
             let str = searchStr
             DataService.shared.searchTerm = str
-            x.reloadSearch()
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.TbView.reloadData() //throwing it back on the main thread
-            })
+            job.reloadSearch {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.TbView.reloadData() //throwing it back on the main thread
+                })
+            } //Need to double click for table view to update, fix later
+            
+//            
+//            searchBar.alpha = 0
+//            prevBtn.alpha = 1
+//            positionsLbl.alpha = 1
+//            searchBtn.alpha = 1
+//            
+//            view.endEditing(true)
+
+            
            
         }
     
@@ -123,8 +134,6 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         }
     }
     
-
-
     
 
 }
