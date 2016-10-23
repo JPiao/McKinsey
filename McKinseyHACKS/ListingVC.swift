@@ -8,17 +8,24 @@
 
 import UIKit
 
-class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var TbView: UITableView!
     @IBOutlet weak var prevBtn: UIButton!
     @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBtn: UIButton!
+    @IBOutlet weak var positionsLbl: UILabel!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         TbView.delegate = self
         TbView.dataSource = self
+        searchBar.delegate = self
         
 
         // Do any additional setup after loading the view.
@@ -73,5 +80,31 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func prevBtnPress(sender: AnyObject!) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func searchBtnPress(sender: AnyObject) {
+        searchBar.alpha = 0.8
+        prevBtn.alpha = 0
+        positionsLbl.alpha = 0
+        searchBtn.alpha = 0
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text == "" || searchBar.text == nil {
+            searchBar.alpha = 0
+            prevBtn.alpha = 1
+            positionsLbl.alpha = 1
+            searchBtn.alpha = 1
+           
+            view.endEditing(true)
+        
+        }
+    }
+
+    
 
 }
