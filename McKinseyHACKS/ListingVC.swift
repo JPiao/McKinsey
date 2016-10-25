@@ -29,17 +29,6 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.Done
         searchBar.enablesReturnKeyAutomatically = false
-        
-        
-
-        // Do any additional setup after loading the view.
-    }
-    
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -58,18 +47,21 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             cell.configureCell(post)
            
             return cell
-        } else {
+            
+        } else { //If cant deque a cell, create a new ListCell
             return ListCell()
 
         }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         let url = DataService.shared.jobList[indexPath.row].url
         performSegueWithIdentifier("WebView", sender: url)
     }
     
-    //connect segue from view controller and not table view cell or else you get nil when passing data
+    
+    //connect segue from view controller and not from table view cell or else you get nil when passing data
     //if connecting segue from cell, it doesn't call the code we wrote, it only triggers a segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "WebView" {
@@ -89,6 +81,9 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     }
     
     @IBAction func searchBtnPress(sender: AnyObject) {
+        //if users presses search button, make button, map button, and title invisible
+        //bring up search bar
+        
         searchBar.alpha = 0.8
         prevBtn.alpha = 0
         positionsLbl.alpha = 0
@@ -107,23 +102,15 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.TbView.reloadData() //throwing it back on the main thread
                 })
-            } //Need to double click for table view to update, fix later
-            
-//            
-//            searchBar.alpha = 0
-//            prevBtn.alpha = 1
-//            positionsLbl.alpha = 1
-//            searchBtn.alpha = 1
-//            
-//            view.endEditing(true)
-
-            
-           
+            } //Fix for later: Need to double click return for table view to update with new search results
         }
     
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        //if users deletes everything in the search bar, remove keyboard, and search bar.
+        //Show search button, title, and map button
         
         if searchBar.text == "" || searchBar.text == nil {
             searchBar.alpha = 0
@@ -136,7 +123,5 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         
         }
     }
-    
-    
 
 }

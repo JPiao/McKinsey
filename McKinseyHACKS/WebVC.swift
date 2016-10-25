@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 
 class WebVC: UIViewController {
+    //Brings up website when table cell is clicked
 
     @IBOutlet weak var container: UIView!
     
@@ -20,7 +21,6 @@ class WebVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         webView = WKWebView()
         container.addSubview(webView)
         
@@ -35,7 +35,6 @@ class WebVC: UIViewController {
         
     }
 
-    
     func loadRequest(URLStr: String) {
         
         let url = NSURL(string: URLStr)!
@@ -44,18 +43,10 @@ class WebVC: UIViewController {
         webView.loadRequest(request)
     }
 
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func backBtnPress(sender: AnyObject) {
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
-
-
-
 }

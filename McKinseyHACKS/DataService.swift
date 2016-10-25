@@ -12,11 +12,9 @@ class DataService {
     
     static let shared = DataService()
     
+    //Always having the most recent search term and job list in memory
     var jobList = [NewJob]()
     
     var searchTerm: String!
     
-    func addJob(job: NewJob) {
-        jobList.append(job)
-    }
 }

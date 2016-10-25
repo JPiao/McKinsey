@@ -14,7 +14,6 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
     @IBOutlet weak var textfield2: UITextField!
     @IBOutlet weak var textfield3: UITextField!
     @IBOutlet weak var textfield4: UITextField!
-    
 
     var Link2 = DLJobs()
     
@@ -50,8 +49,6 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
     // for hitting return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -69,6 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
         performSegueWithIdentifier("contBtn", sender: nil)
         
         Link2.downloadJobs { //need to call this after button press and not in viewdidload or appear since dataservice.shared.search term is nil when the view is loaded into memory and will result in error
+            
             for i in 0 ..< DataService.shared.jobList.count {
                 print(DataService.shared.jobList[i].comp)
             }
