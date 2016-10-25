@@ -31,9 +31,6 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
     
          // for tapping outside keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard)))
-        
-
-        
     }
     
     // for tapping outside keyboard
@@ -42,11 +39,6 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
         textfield2.resignFirstResponder()
         textfield3.resignFirstResponder()
         textfield4.resignFirstResponder()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // for hitting return
