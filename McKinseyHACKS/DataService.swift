@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+//Singleton
 class DataService {
     
     static let shared = DataService()
