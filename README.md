@@ -1,4 +1,4 @@
-#McKinsey Build with Data Hackathon
+#McKinsey & Co Build with Data Hackathon
 #Won Best Business Case
 
 Native iOS and Android App
