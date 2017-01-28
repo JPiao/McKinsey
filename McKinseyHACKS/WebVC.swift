@@ -14,7 +14,6 @@ class WebVC: UIViewController {
 
     @IBOutlet weak var container: UIView!
     
-    
     var webView: WKWebView!
     var WebUrl: String!
     
@@ -22,8 +21,7 @@ class WebVC: UIViewController {
         super.viewDidLoad()
 
         webView = WKWebView()
-        container.addSubview(webView)
-        
+        container.addSubview(webView) 
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -31,22 +29,17 @@ class WebVC: UIViewController {
         webView.frame = frame
         
         print(WebUrl)
-        loadRequest(WebUrl)
-        
+        loadRequest(WebUrl)    
     }
 
     func loadRequest(URLStr: String) {
-        
         let url = NSURL(string: URLStr)!
         let request = NSURLRequest(URL: url)
         
         webView.loadRequest(request)
     }
-
     
     @IBAction func backBtnPress(sender: AnyObject) {
-        
         dismissViewControllerAnimated(true, completion: nil)
-    }
-    
+    } 
 }
