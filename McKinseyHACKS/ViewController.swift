@@ -16,13 +16,12 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
     @IBOutlet weak var textfield4: UITextField!
 
     var Link2 = DLJobs()
-    
+  
     override func viewDidLoad() {
-    
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-         // for hitting return
+        // for hitting return
         textfield1.delegate = self
         textfield2.delegate = self
         textfield3.delegate = self
@@ -48,7 +47,6 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
     }
     
     @IBAction func contBtnClicked(sender: AnyObject) {
-        
         if textfield4.text != "" || textfield4.text != nil {
             DataService.shared.searchTerm = textfield4.text!
             
@@ -64,5 +62,4 @@ class ViewController: UIViewController, UITextFieldDelegate { // inherit for hit
             }
         }
     }
-
 }
