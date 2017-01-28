@@ -20,7 +20,6 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     
     var searchStr: String = ""
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,12 +49,10 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             
         } else { //If cant deque a cell, create a new ListCell
             return ListCell()
-
         }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         let url = DataService.shared.jobList[indexPath.row].url
         performSegueWithIdentifier("WebView", sender: url)
     }
@@ -83,7 +80,6 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     @IBAction func searchBtnPress(sender: AnyObject) {
         //if users presses search button, make button, map button, and title invisible
         //bring up search bar
-        
         searchBar.alpha = 0.8
         prevBtn.alpha = 0
         positionsLbl.alpha = 0
@@ -104,7 +100,6 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 })
             } //Fix for later: Need to double click return for table view to update with new search results
         }
-    
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
@@ -119,9 +114,7 @@ class ListingVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             searchBtn.alpha = 1
             mapBtn.alpha = 1
            
-            view.endEditing(true)
-        
+            view.endEditing(true)  
         }
     }
-
 }
