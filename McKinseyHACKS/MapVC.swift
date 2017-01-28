@@ -9,6 +9,9 @@
 import UIKit
 import MapKit
 
+
+//Display all the jobs within a certain radius that the user specifies
+
 class MapVC: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -18,9 +21,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         mapView.delegate = self
-        
+         mapView.delegate = self   
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -28,15 +29,13 @@ class MapVC: UIViewController, MKMapViewDelegate {
     }
     
     func authStatus() {
-        
         //if user authorized location services, show location on map, else, ask for authorization
         //have to got into info.plist and click add and add NSLocationWhenInUseUsageDescription and set the pop up message
         if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
             mapView.showsUserLocation = true
         } else {
             locationManager.requestWhenInUseAuthorization()
-        }
-        
+        }   
     }
 
     func centreMapAroundLocation(location: CLLocation) {
@@ -58,5 +57,4 @@ class MapVC: UIViewController, MKMapViewDelegate {
     @IBAction func backBtnPress(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
 }
